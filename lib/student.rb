@@ -6,7 +6,7 @@ class Student
 
   def initialize(student_hash)
     student_hash.each { |key, value|
-      attr_accessor key.to_sym
+      Student.attr_accessor key.to_sym
       self.send("#{key}=", value)
     }
     @@all << self
